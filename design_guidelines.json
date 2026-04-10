@@ -1,0 +1,190 @@
+{
+  "theme_archetype": {
+    "name": "Archetype 4 (Swiss & High-Contrast) - Dark Mode Adaptation",
+    "rationale": "Vantage requires a professional, authoritative, and clean SaaS aesthetic. The dark mode combined with high-contrast elements conveys cutting-edge AI capability while avoiding the muddy 'tech-bro' tropes. It's sophisticated, sharp, and highly legible."
+  },
+  "colors": {
+    "background": {
+      "default": "#050505",
+      "surface": "#0A0A0B",
+      "surface_elevated": "#121214",
+      "surface_glass": "rgba(10, 10, 11, 0.6)"
+    },
+    "primary": {
+      "default": "#E4E4E7",
+      "hover": "#FFFFFF",
+      "active": "#D4D4D8",
+      "foreground": "#050505"
+    },
+    "accent": {
+      "default": "#4F46E5",
+      "hover": "#6366F1",
+      "glow": "rgba(79, 70, 229, 0.5)",
+      "muted": "rgba(79, 70, 229, 0.1)"
+    },
+    "text": {
+      "heading": "#FFFFFF",
+      "body": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "border": {
+      "subtle": "rgba(255, 255, 255, 0.08)",
+      "strong": "rgba(255, 255, 255, 0.15)",
+      "accent": "rgba(79, 70, 229, 0.5)"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Outfit', sans-serif",
+      "body": "'Plus Jakarta Sans', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl md:text-7xl font-semibold tracking-tighter leading-[1.1]",
+      "h2": "text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight leading-tight",
+      "h3": "text-xl sm:text-2xl font-medium tracking-tight",
+      "h4": "text-lg font-medium",
+      "body_lg": "text-lg text-zinc-400 leading-relaxed",
+      "body": "text-base text-zinc-400 leading-relaxed",
+      "label": "text-xs font-semibold tracking-[0.2em] uppercase text-zinc-500"
+    },
+    "rules": [
+      "Headings must use Outfit. Never use Inter for headings.",
+      "Always apply tight tracking (tracking-tight or tighter) to headings over 32px.",
+      "Never center align dense content; left-align by default unless the section specifically calls for a symmetrical focal point."
+    ]
+  },
+  "surfaces_and_fx": {
+    "glassmorphism": "backdrop-blur-xl bg-[#0A0A0B]/60 border-b border-white/5",
+    "card_default": "bg-[#0A0A0B] border border-white/5 rounded-2xl p-8 hover:bg-[#121214] transition-colors duration-300",
+    "card_glow": "bg-[#0A0A0B] border border-indigo-500/30 rounded-2xl p-8 shadow-[0_0_30px_rgba(79,70,229,0.15)]",
+    "rules": [
+      "Use purely CSS borders and shadows for UIs, do not rely on images for container aesthetics.",
+      "Elements inside cards must have appropriate breathing room (p-6 or p-8).",
+      "Never use pure black #000000; always use tinted blacks."
+    ]
+  },
+  "layout_spacing": {
+    "containers": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_padding": "py-24 md:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-3 gap-6",
+    "rules": [
+      "Generous Spacing Philosophy: Use wide gaps (gap-6 to gap-12).",
+      "Mobile-First: Start with single columns, then scale up."
+    ]
+  },
+  "motion": {
+    "libraries": [
+      "framer-motion",
+      "lenis",
+      "react-fast-marquee"
+    ],
+    "patterns": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 20 },
+        "animate": { "opacity": 1, "y": 0 },
+        "transition": { "duration": 0.6, "ease": [0.22, 1, 0.36, 1] }
+      },
+      "stagger_children": {
+        "transition": { "staggerChildren": 0.1 }
+      }
+    },
+    "rules": [
+      "Animations should feel organic and premium, not fast and aggressive.",
+      "Always respect prefers-reduced-motion in Framer Motion configurations."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "primary": "inline-flex items-center justify-center rounded-full bg-white text-black px-6 py-3 text-sm font-medium hover:bg-zinc-200 transition-colors",
+      "secondary": "inline-flex items-center justify-center rounded-full bg-transparent border border-white/20 text-white px-6 py-3 text-sm font-medium hover:bg-white/5 transition-colors",
+      "accent": "inline-flex items-center justify-center rounded-full bg-indigo-600 text-white px-6 py-3 text-sm font-medium hover:bg-indigo-500 transition-colors"
+    },
+    "inputs": {
+      "default": "bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500/50 transition-all"
+    },
+    "accordion": {
+      "default": "border-b border-white/10 py-4"
+    },
+    "shadcn_overrides": "Override all default Vercel-like radii and borders. Buttons should be fully rounded (rounded-full) for primary CTAs, and rounded-xl/2xl for cards."
+  },
+  "media_assets": [
+    {
+      "category": "hero_background",
+      "url": "https://static.prod-images.emergentagent.com/jobs/a1e76e15-9771-419a-a818-f74fe24419e0/images/df410e640cd0b111db2e65450581b176c054010106c39acc776acf9863190872.png",
+      "description": "Minimalist dark abstract texture to be used as a subtle background pattern for the Hero section or Page wrapper. Use with low opacity (10-20%)."
+    },
+    {
+      "category": "hero_illustration",
+      "url": "https://static.prod-images.emergentagent.com/jobs/a1e76e15-9771-419a-a818-f74fe24419e0/images/012caab1932ca67ea05d1f984505f154f5d52f136f9a7e0e0b7f09d85284ed9d.png",
+      "description": "Abstract 3D node matching visualization. Use in the Hero section alongside the main text. Ensure max-h-[600px] and subtle floating animation via framer-motion."
+    },
+    {
+      "category": "founder_portrait",
+      "url": "https://images.unsplash.com/photo-1758598305805-4b9d79ae89bf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwzfHxjcmVhdG9yJTIwaW5mbHVlbmNlciUyMHBvcnRyYWl0fGVufDB8fHx8MTc3NTQ1OTkxMHww&ixlib=rb-4.1.0&q=85",
+      "description": "Portrait image of Aidan Kelley (Founder) for the About section. Use in a 4:5 ratio, rounded-2xl, with a grayscale filter (grayscale hover:grayscale-0 transition)."
+    }
+  ],
+  "pages": {
+    "landing_page": {
+      "path": "/",
+      "sections": [
+        {
+          "name": "Navigation",
+          "details": "Sticky top, Crystal variant (bg-[#0A0A0B]/60 backdrop-blur-xl border-b border-white/5). Links: How it works, Pricing, Free Audit. CTA: Join Waitlist (White filled button). Must have z-50."
+        },
+        {
+          "name": "Hero",
+          "details": "Layout: Grid cols-1 lg:grid-cols-2. Left: H1 'Brand deals. Automated.', Subtitle, CTAs ('Try Free Audit \u2192' white button, 'Join Waitlist' transparent button). Right: hero_illustration asset with floating animation. Background uses hero_background at 10% opacity."
+        },
+        {
+          "name": "Scrolling Ticker",
+          "details": "Use react-fast-marquee. Text only, separated by '·' or small lucide stars. Text should be uppercase, tracking-widest, text-zinc-500, slow speed. Terms: Brands, Agencies, Creators, AI Matching, Brand Deals, No Spreadsheets, 30 Seconds, $200B Market, Zero Agencies."
+        },
+        {
+          "name": "Problem Section",
+          "details": "H2: 'The creator economy is $200B. The matching layer is broken.' Bento grid of 3 cards. Cards must use glassmorphism with slight inner border. Icons from lucide-react (e.g., SearchX, Users, TrendingDown)."
+        },
+        {
+          "name": "How it works",
+          "details": "Vertical timeline or 4-step horizontal process. Bold numbers (text-6xl text-white/10 font-bold). Steps: 1. Describe campaign 2. AI matches creators 3. Brief/Approve/Publish 4. Real ROI."
+        },
+        {
+          "name": "Pricing",
+          "details": "3 tiers (Starter, Growth, Agency). Growth tier must have the 'Tracing Beam' glow border (border-indigo-500/50 shadow-glow) and 'Most Popular' badge. All CTAs say 'Join Waitlist \u2192'. Overline text noting '3 months free' above the grid."
+        },
+        {
+          "name": "About",
+          "details": "Founder story. Grid layout with founder_portrait image on left, text on right. Grayscale image filter."
+        },
+        {
+          "name": "FAQ",
+          "details": "Shadcn accordion components. Minimal styling, white/10 borders."
+        },
+        {
+          "name": "Waitlist CTA",
+          "details": "Massive typography. Form containing Email input, Select dropdown (Brand/Creator/Agency), Submit button. Success message on submission."
+        },
+        {
+          "name": "Footer",
+          "details": "Minimal, py-12, links, © 2025 Vantage."
+        }
+      ]
+    },
+    "audit_app": {
+      "path": "/audit",
+      "details": "Multi-screen quiz logic. Must have a fixed header with progress bar (indigo-500). One question per screen. Framer-motion for sliding between steps (AnimatePresence).",
+      "flow": [
+        "Step 1-9: Simple forms, large clickable option cards (bg-zinc-900 border-white/10 hover:border-indigo-500).",
+        "Loading State: 2-3 seconds, ASCII art or spinner with 'Analyzing your campaign setup...'",
+        "Results State: AI-generated personalized insights based on answers. Campaign Health Summary, Top 3 Problems, Next 3 Actions. Bottom CTA linking to /#waitlist."
+      ]
+    }
+  },
+  "technical_rules": {
+    "testing": "All interactive elements MUST include data-testid (e.g., data-testid='hero-cta-audit', data-testid='waitlist-submit-button').",
+    "accessibility": "Contrast ratios must pass APCA/WCAG. Focus states must be visible (focus:ring-2 focus:ring-indigo-500/50).",
+    "components": "Use shadcn/ui for Select, Accordion, Progress, Dialog. Always customize Shadcn defaults to match this design system.",
+    "fonts": "Install and configure @fontsource/outfit and @fontsource/plus-jakarta-sans."
+  }
+}
